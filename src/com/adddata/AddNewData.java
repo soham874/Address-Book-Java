@@ -1,5 +1,8 @@
 package com.adddata;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -16,6 +19,10 @@ public class AddNewData {
 		PatternCheck pat = new PatternCheck();
 		Initialize obj = new Initialize();
 		
+		File file = new File(addressbookmain.filename);
+		FileWriter writer = new FileWriter(file,true); 
+		BufferedWriter br = new BufferedWriter(writer);
+		
 		PatternCheck.i = 0;
 		System.out.println("Enter persons First Name");
 		pat.patterncheck(sc.nextLine(), 1);
@@ -31,10 +38,15 @@ public class AddNewData {
 		pat.patterncheck(sc.nextLine(), 4);
 		System.out.println("Enter persons ZIP");
 		pat.patterncheck(sc.nextInt(), 3);
-				
-		for (int j=0;j<=6;j++)
-			System.out.println(entryInfo[j]);
+	
+		for (int j=0;j<=6;j++) {
+			if (j == 0 && Initialize.lines != 0 )
+				br.write("\n");
+			br.write(entryInfo[j]+";");	
+		}
 		
+		br.flush();
+		writer.close();
 		obj.initiate();
 		addressbookmain.InitMenu();
 		sc.close();
