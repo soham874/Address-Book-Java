@@ -16,7 +16,7 @@ public class Initialize {
 	public void initiate() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(addressbookmain.filename));
 		String currentLine;
-
+		lines = 0;
 		while ((currentLine = br.readLine()) != null) {
 
 			String[] addressdata = currentLine.split(";");
@@ -27,8 +27,8 @@ public class Initialize {
 			address[lines] = addressdata[2];
 			city[lines] = addressdata[3];
 			state[lines] = addressdata[4];
-			ZIP[lines] = addressdata[5];
-			Phone[lines] = addressdata[6];
+			ZIP[lines] = addressdata[6];
+			Phone[lines] = addressdata[5];
 
 			lines++;
 		}

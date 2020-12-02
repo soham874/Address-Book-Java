@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.adddata.AddNewData;
+
 public class addressbookmain {
 	public static String filename;
 	
-	public static void InitMenu() {
+	public static void InitMenu() throws IOException {
 		
 		Scanner sc = new Scanner(System.in);
 				
@@ -20,7 +22,8 @@ public class addressbookmain {
 		int choice = sc.nextInt();
 		switch (choice) {
 		case 1:
-			
+			AddNewData add = new AddNewData();
+			add.adddata();
 			break;
 		case 2:
 			
@@ -47,8 +50,8 @@ public class addressbookmain {
 		System.out.println("Welcome to Address Book!!\n");
 
 		System.out.println("Enter the filename. Please note that it must be placed in the main project folder. : - ");
-		filename = sc.nextLine();
-		//filename="file";
+		//filename = sc.nextLine();
+		filename="file";
 		File tmpDir = new File(filename);
 		boolean exists = tmpDir.exists();
 

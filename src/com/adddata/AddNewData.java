@@ -27,12 +27,13 @@ public class AddNewData {
 		pat.patterncheck(sc.nextLine(), 1);
 		System.out.println("Enter persons State");
 		pat.patterncheck(sc.nextLine(), 1);
+		System.out.println("Enter persons Phone number");
+		pat.patterncheck(sc.nextLine(), 4);
 		System.out.println("Enter persons ZIP");
 		pat.patterncheck(sc.nextInt(), 3);
-		System.out.println("Enter persons Phone number");
-		pat.patterncheck(sc.nextInt(), 4);
-		
-		
+				
+		for (int j=0;j<=6;j++)
+			System.out.println(entryInfo[j]);
 		
 		obj.initiate();
 		addressbookmain.InitMenu();
