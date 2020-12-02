@@ -53,7 +53,7 @@ public class addressbookmain {
 		boolean exists = tmpDir.exists();
 
 		if (exists) {
-			obj.initialzie();
+			obj.initiate();
 			System.out.println("Data from required file loaded successfully.");
 		} else {
 			tmpDir.createNewFile();

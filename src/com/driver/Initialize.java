@@ -13,7 +13,7 @@ public class Initialize {
 	public static String[] ZIP = new String[100];
 	public static String[] Phone = new String[100];
 
-	public void initialzie() throws IOException {
+	public void initiate() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(addressbookmain.filename));
 		String currentLine;
 
