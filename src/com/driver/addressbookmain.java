@@ -15,21 +15,18 @@ public class addressbookmain {
 		System.out.println("Welcome to Address Book!!\n");
 
 		System.out.println("Enter the filename. Please note that it must be placed in the main project folder. : - ");
-		//filename = sc.nextLine();
-		filename="file";
+		filename = sc.nextLine();
+		//filename="file";
 		File tmpDir = new File(filename);
 		boolean exists = tmpDir.exists();
 
 		if (exists) {
 			obj.initialzie();
-			System.out.println("Number of lines in file = " + Initialize.lines);
+			System.out.println("Data from required file loaded successfully.");
 		} else {
-			System.out.println("Does not exist.");
+			tmpDir.createNewFile();
+			System.out.println("File does not exist. New address book created.");
 		}
-		
-/*		for (int i=0; i<Initialize.lines ; i++) {
-			System.out.println("Name "+(i+1)+" is "+Initialize.fullnames[i]);
-		}
-*/		sc.close();
+	sc.close();
 	}
 }
