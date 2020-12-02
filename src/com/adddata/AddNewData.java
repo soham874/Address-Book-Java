@@ -18,16 +18,19 @@ public class AddNewData {
 		Scanner sc = new Scanner(System.in);
 		PatternCheck pat = new PatternCheck();
 		Initialize obj = new Initialize();
+		Verify name = new Verify();
 		
 		File file = new File(addressbookmain.filename);
 		FileWriter writer = new FileWriter(file,true); 
 		BufferedWriter br = new BufferedWriter(writer);
 		
 		PatternCheck.i = 0;
+		System.out.println('\n'+ "### Enter New Data ###");
 		System.out.println("Enter persons First Name");
 		pat.patterncheck(sc.nextLine(), 1);
 		System.out.println("Enter persons Last Name");
 		pat.patterncheck(sc.nextLine(), 1);
+		name.dupliucate(entryInfo[0]+" "+entryInfo[1]);
 		System.out.println("Enter persons Address");
 		pat.patterncheck(sc.nextLine(), 2);
 		System.out.println("Enter persons City");
@@ -44,7 +47,7 @@ public class AddNewData {
 				br.write("\n");
 			br.write(entryInfo[j]+";");	
 		}
-		
+		System.out.println("###   New data entry successful.   ###");
 		br.flush();
 		writer.close();
 		obj.initiate();
