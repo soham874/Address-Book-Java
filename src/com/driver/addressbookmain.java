@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import com.adddata.AddNewData;
+import com.viewdata.ViewMainMenu;
 
 public class addressbookmain {
 	public static String filename;
@@ -26,7 +27,8 @@ public class addressbookmain {
 			add.adddata();
 			break;
 		case 2:
-			
+			ViewMainMenu view = new ViewMainMenu();
+			view.viewmenu();
 			break;
 		case 3:
 			
