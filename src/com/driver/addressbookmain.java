@@ -52,8 +52,8 @@ public class addressbookmain {
 		System.out.println("Welcome to Address Book!!\n");
 
 		System.out.println("Enter the filename. Please note that it must be placed in the main project folder. : - ");
-		filename = sc.nextLine();
-		//filename="file";
+		//filename = sc.nextLine();
+		filename="addressbook";
 		File tmpDir = new File(filename);
 		boolean exists = tmpDir.exists();
 

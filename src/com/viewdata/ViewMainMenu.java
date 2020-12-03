@@ -15,7 +15,7 @@ public class ViewMainMenu {
 		System.out.println('\n'+"### View menu ###");
 		System.out.println("Enter choice.");
 		System.out.println("<1> View records for a particular person.");
-		System.out.println("<2> View all records sorted in scending or descending.");
+		System.out.println("<2> View all records sorted in ascending or descending.");
 		System.out.println("<3> Back to main menu");
 		int choice = sc.nextInt();
 		switch(choice) {
