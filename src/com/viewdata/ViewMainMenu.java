@@ -23,7 +23,8 @@ public class ViewMainMenu {
 			
 			break;
 		case 2:
-			
+			SortViewData view = new SortViewData();
+			view.acceptOrder();
 			break;
 		case 3:
 			addressbookmain.InitMenu();

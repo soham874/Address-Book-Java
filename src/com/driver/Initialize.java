@@ -12,6 +12,7 @@ public class Initialize {
 	public static String[] state = new String[100];
 	public static String[] ZIP = new String[100];
 	public static String[] Phone = new String[100];
+	public static String[] Lastname = new String[100];
 
 	public void initiate() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(addressbookmain.filename));
@@ -24,6 +25,7 @@ public class Initialize {
 			// addressdata[2]);
 
 			fullnames[lines] = addressdata[0] + " " + addressdata[1];
+			Lastname[lines] = addressdata[1];
 			address[lines] = addressdata[2];
 			city[lines] = addressdata[3];
 			state[lines] = addressdata[4];
