@@ -5,15 +5,16 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import com.adddata.AddNewData;
+import com.deletedata.DeleteDataMenu;
 import com.viewdata.ViewMainMenu;
 
 public class addressbookmain {
 	public static String filename;
-	
+
 	public static void InitMenu() throws IOException {
-		
+
 		Scanner sc = new Scanner(System.in);
-				
+
 		System.out.println('\n' + "### Main Menu ###");
 		System.out.println("Please enter your choice :- ");
 		System.out.println("<1> Enter new data.");
@@ -21,6 +22,7 @@ public class addressbookmain {
 		System.out.println("<3> Edit existing data.");
 		System.out.println("<4> Exit address book.");
 		int choice = sc.nextInt();
+		sc.nextLine();
 		switch (choice) {
 		case 1:
 			AddNewData add = new AddNewData();
@@ -31,7 +33,7 @@ public class addressbookmain {
 			view.viewmenu();
 			break;
 		case 3:
-			
+			DeleteDataMenu.deletemenu();
 			break;
 		case 4:
 			System.out.println('\n' + "Finishing with " + Initialize.lines + " records.");
@@ -41,30 +43,29 @@ public class addressbookmain {
 			System.out.println("Wrong choice entered. Please try again.");
 		}
 		InitMenu();
-		
+
 	}
 
 	public static void main(String[] args) throws IOException {
-
-		Initialize obj = new Initialize();
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to Address Book!!\n");
 
 		System.out.println("Enter the filename. Please note that it must be placed in the main project folder. : - ");
-		//filename = sc.nextLine();
-		filename="addressbook";
+		// filename = sc.nextLine();
+		
+		filename = "addressbook";
 		File tmpDir = new File(filename);
 		boolean exists = tmpDir.exists();
 
 		if (exists) {
-			obj.initiate();
+			Initialize.initiate();
 			System.out.println("Data from required file loaded successfully.");
 		} else {
 			tmpDir.createNewFile();
 			System.out.println("File does not exist. New address book created.");
 		}
-	InitMenu();
-	
+		InitMenu();
+
 	}
 }

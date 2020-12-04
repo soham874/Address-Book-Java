@@ -14,7 +14,7 @@ public class Initialize {
 	public static String[] Phone = new String[100];
 	public static String[] Lastname = new String[100];
 
-	public void initiate() throws IOException {
+	public static void initiate() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(addressbookmain.filename));
 		String currentLine;
 		lines = 0;

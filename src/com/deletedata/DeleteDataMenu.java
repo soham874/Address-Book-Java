@@ -1,13 +1,32 @@
 package com.deletedata;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
+import com.driver.Initialize;
 import com.driver.addressbookmain;
 
 public class DeleteDataMenu {
 
-	public void deletemenu() throws IOException {
+	public static void deleteentry() throws IOException {
+		
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Are you sure you want to delete all data? Enter 1 to verify");
+		int choice = sc.nextInt();
+		sc.nextLine();
+		if (choice == 1) {
+			PrintWriter writer = new PrintWriter(addressbookmain.filename);
+			writer.print("");
+			writer.close();
+			System.out.println("Address book cleared.");
+			Initialize.initiate();
+		} else
+			System.out.println("Operation aborted.");
+	}
+
+	public static void deletemenu() throws IOException {
 
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -19,15 +38,16 @@ public class DeleteDataMenu {
 		System.out.println("<3> Delete all records.");
 		System.out.println("<4> Back to main menu");
 		int choice = sc.nextInt();
+		sc.nextLine();
 		switch (choice) {
 		case 1:
 
 			break;
 		case 2:
-
+			
 			break;
 		case 3:
-
+			deleteentry();
 			break;
 		case 4:
 			addressbookmain.InitMenu();

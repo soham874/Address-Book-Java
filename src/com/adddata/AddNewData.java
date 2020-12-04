@@ -17,7 +17,6 @@ public class AddNewData {
 
 		Scanner sc = new Scanner(System.in);
 		PatternCheck pat = new PatternCheck();
-		Initialize obj = new Initialize();
 		Verify name = new Verify();
 		
 		File file = new File(addressbookmain.filename);
@@ -50,7 +49,7 @@ public class AddNewData {
 		System.out.println("###   New data entry successful.   ###");
 		br.flush();
 		writer.close();
-		obj.initiate();
+		Initialize.initiate();
 		addressbookmain.InitMenu();
 		sc.close();
 	}
