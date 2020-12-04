@@ -3,6 +3,7 @@ package com.viewdata;
 import java.io.IOException;
 import java.util.Scanner;
 
+import com.driver.NameSearch;
 import com.driver.addressbookmain;
 
 public class ViewMainMenu {
@@ -20,7 +21,9 @@ public class ViewMainMenu {
 		int choice = sc.nextInt();
 		switch(choice) {
 		case 1:
-			
+			System.out.println("Please enter name of person.");
+			String check = sc.next();
+			NameSearch.namecheck(check,0);
 			break;
 		case 2:
 			SortViewData view = new SortViewData();
