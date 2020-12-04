@@ -21,8 +21,6 @@ public class Initialize {
 		while ((currentLine = br.readLine()) != null) {
 
 			String[] addressdata = currentLine.split(";");
-			// System.out.println(addressdata[0] + " " + addressdata[1] + " " +
-			// addressdata[2]);
 
 			fullnames[lines] = addressdata[0] + " " + addressdata[1];
 			Lastname[lines] = addressdata[1];

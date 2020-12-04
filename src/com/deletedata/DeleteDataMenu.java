@@ -34,20 +34,22 @@ public class DeleteDataMenu {
 		System.out.println('\n' + "### View menu ###");
 		System.out.println("Enter choice.");
 		System.out.println("<1> Delete records for a particular person.");
-		System.out.println("<2> Edit records for a particular person.");
-		System.out.println("<3> Delete all records.");
+		System.out.println("<2> Delete all records.");
+		System.out.println("<3> Edit records for a particular person.");
 		System.out.println("<4> Back to main menu");
 		int choice = sc.nextInt();
 		sc.nextLine();
 		switch (choice) {
 		case 1:
-
+			System.out.println("Please enter name of person.");
+			String check = sc.nextLine();
+			DeletePerson.deletesingle(check);
 			break;
 		case 2:
-			
+			deleteentry();
 			break;
 		case 3:
-			deleteentry();
+			
 			break;
 		case 4:
 			addressbookmain.InitMenu();

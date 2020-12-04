@@ -42,8 +42,7 @@ public class AddNewData {
 		pat.patterncheck(sc.nextInt(), 3);
 	
 		for (int j=0;j<=6;j++) {
-			if (j == 0 && Initialize.lines != 0 )
-				br.write("\n");
+			
 			br.write(entryInfo[j]+";");	
 		}
 		System.out.println("###   New data entry successful.   ###");
