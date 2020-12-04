@@ -19,10 +19,11 @@ public class ViewMainMenu {
 		System.out.println("<2> View all records sorted in ascending or descending.");
 		System.out.println("<3> Back to main menu");
 		int choice = sc.nextInt();
+		sc.nextLine();
 		switch(choice) {
 		case 1:
 			System.out.println("Please enter name of person.");
-			String check = sc.next();
+			String check = sc.nextLine();
 			NameSearch.namecheck(check,0);
 			break;
 		case 2:

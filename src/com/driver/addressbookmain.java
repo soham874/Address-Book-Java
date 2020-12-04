@@ -41,7 +41,7 @@ public class addressbookmain {
 			System.out.println("Wrong choice entered. Please try again.");
 		}
 		InitMenu();
-		sc.close();
+		
 	}
 
 	public static void main(String[] args) throws IOException {
@@ -65,6 +65,6 @@ public class addressbookmain {
 			System.out.println("File does not exist. New address book created.");
 		}
 	InitMenu();
-	sc.close();
+	
 	}
 }
