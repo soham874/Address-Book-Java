@@ -41,6 +41,8 @@ public class Person {
 		PatternCheck.patterncheck(sc.nextLine(), 5);
 
 		for (int j = 0; j <= 6; j++) {
+			if (j == 0 && Initialize.lines != 0)
+				br.write('\n');
 			br.write(entryInfo[j] + ";");
 		}
 		System.out.println("###   New data entry successful.   ###");
