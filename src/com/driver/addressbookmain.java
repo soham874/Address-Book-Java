@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-import com.adddata.AddNewData;
+import com.adddata.Person;
 import com.deletedata.DeleteDataMenu;
 import com.viewdata.ViewMainMenu;
 
@@ -25,8 +25,7 @@ public class addressbookmain {
 		sc.nextLine();
 		switch (choice) {
 		case 1:
-			AddNewData add = new AddNewData();
-			add.adddata();
+			Person.adddata();
 			break;
 		case 2:
 			ViewMainMenu view = new ViewMainMenu();

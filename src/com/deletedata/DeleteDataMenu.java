@@ -49,7 +49,9 @@ public class DeleteDataMenu {
 			deleteentry();
 			break;
 		case 3:
-			
+			System.out.println("Please enter name of person.");
+			String check1 = sc.nextLine();
+			EditPerson.editsingle(check1);
 			break;
 		case 4:
 			addressbookmain.InitMenu();

@@ -9,29 +9,32 @@ import com.driver.addressbookmain;
 public class PatternCheck {
 
 	public static int i;
-	Pattern pattern = null;
-	String patternNameCityState = "^[A-Z]{1}[a-z]{2,}.*$";
-	String patternAddress = "^.{10,}$";
-	String patternZIP = "^[0-9]{6}$";
-	String patternPhone = "^[0-9]{10}$";
+	static Pattern pattern = null;
+	static String patternNameCityState = "^[A-Z]{1}[a-z]{2,}.*$";
+	static String patternAddress = "^.{10,}$";
+	static String patternZIP = "^[0-9]{6}$";
+	static String patternPhone = "^[0-9]{10}$";
 
-	public void patterncheck(String input, int flag1) throws IOException {
+	public static void patterncheck(String input, int flag1) throws IOException {
 		
 		switch (flag1) {
-		case 1:
+		case 0,2,3:
 			pattern = Pattern.compile(patternNameCityState, Pattern.MULTILINE);
 			break;
-		case 2:
+		case 1:
 			pattern = Pattern.compile(patternAddress, Pattern.MULTILINE);
 			break;
 		case 4:
 			pattern = Pattern.compile(patternPhone, Pattern.MULTILINE);
+		case 5:
+			pattern = Pattern.compile(patternZIP, Pattern.MULTILINE);
+			break;
 		}
 
 		final Matcher matcher = pattern.matcher(input);
 
 		if (matcher.find()) {
-			AddNewData.entryInfo[i] = input;
+			Person.entryInfo[i] = input;
 			i++;
 		} else {
 			System.out.println("Error in input. Please start over again.");
@@ -39,25 +42,4 @@ public class PatternCheck {
 			i = 0;
 		}
 	}
-
-	public void patterncheck(int input, int flag1) throws IOException {
-		
-		switch (flag1) {
-		case 3:
-			pattern = Pattern.compile(patternZIP, Pattern.MULTILINE);
-			break;
-		}
-
-		final Matcher matcher = pattern.matcher(Integer.toString(input));
-
-		if (matcher.find()) {
-			AddNewData.entryInfo[i] = Integer.toString(input);
-			i++;
-		} else {
-			System.out.println("Error in input. Please start over again.");
-			addressbookmain.InitMenu();
-			i = 0;
-		}
-	}
-
 }
