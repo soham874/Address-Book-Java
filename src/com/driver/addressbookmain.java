@@ -13,6 +13,7 @@ public class addressbookmain {
 
 	public static void InitMenu() throws IOException {
 
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println('\n' + "### Main Menu ###");
@@ -45,15 +46,15 @@ public class addressbookmain {
 
 	}
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to Address Book!!\n");
 
 		System.out.println("Enter the filename. Please note that it must be placed in the main project folder. : - ");
-		// filename = sc.nextLine();
+		filename = sc.nextLine();
 		
-		filename = "addressbook";
 		File tmpDir = new File(filename);
 		boolean exists = tmpDir.exists();
 
