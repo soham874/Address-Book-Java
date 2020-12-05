@@ -26,6 +26,7 @@ public class PatternCheck {
 			break;
 		case 4:
 			pattern = Pattern.compile(patternPhone, Pattern.MULTILINE);
+			break;
 		case 5:
 			pattern = Pattern.compile(patternZIP, Pattern.MULTILINE);
 			break;

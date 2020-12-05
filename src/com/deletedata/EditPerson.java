@@ -50,12 +50,13 @@ public class EditPerson {
 
 			for (int j = 1; j <= 5; j++) {
 				if (j == 1)
-					br.write(nameparts[1] + ";" + nameparts[2] + ";");
+					br.write(nameparts[0] + ";" + nameparts[1] + ";");
 				br.write(NameSearch.editInfo[j] + ";");
 			}
 
 			br.flush();
 			br.close();
+			System.out.println("New records have been registered successfully.");
 			Initialize.initiate();
 			// System.out.println(Arrays.toString(NameSearch.editInfo));
 			// All verified data is in NameSearch.editInfo
