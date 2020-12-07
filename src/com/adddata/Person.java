@@ -50,6 +50,6 @@ public class Person {
 		writer.close();
 		Initialize.initiate();
 		addressbookmain.InitMenu();
-		sc.close();
+		
 	}
 }

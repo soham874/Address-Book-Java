@@ -17,7 +17,6 @@ public class SortViewData {
 		int column = sc.nextInt();
 		sort(column, order);
 
-		sc.close();
 	}
 
 	public void sort(int column, int order) throws IOException {
